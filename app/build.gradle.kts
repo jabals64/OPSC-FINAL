@@ -19,8 +19,8 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    lintOptions {
-        baseline file("lint-baseline.xml")
+    lint {
+        baseline = file("lint-baseline.xml")
     }
 
     buildTypes {
@@ -105,4 +105,3 @@ dependencies {
     implementation("androidx.biometric:biometric:1.1.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")  // Ensure Kotlin version matches your project's Kotlin version
 }
-
