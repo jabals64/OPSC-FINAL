@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "725777371646",
+    "project_id": "carspotterfb",
+    "storage_bucket": "carspotterfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725777371646:android:733e4aadc79fc7135f30af",
+        "android_client_info": {
+          "package_name": "com.example.carspotteropsc7312poe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725777371646-vau4iv63i2e348am1e65evpbplv1aqta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWtwt-AtxryEataePsqagp8PVVDAcPC-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725777371646-vau4iv63i2e348am1e65evpbplv1aqta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725777371646:android:260a80223d8b32715f30af",
+        "android_client_info": {
+          "package_name": "com.green.carspotteropsc7312poe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725777371646-tva6k3t5t7gcekesmft7q6a04ksu5upd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.green.carspotteropsc7312poe",
+            "certificate_hash": "082d9bcf22e8d1a9cf64bebe55c1a524ca181284"
+          }
+        },
+        {
+          "client_id": "725777371646-vau4iv63i2e348am1e65evpbplv1aqta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWtwt-AtxryEataePsqagp8PVVDAcPC-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725777371646-vau4iv63i2e348am1e65evpbplv1aqta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

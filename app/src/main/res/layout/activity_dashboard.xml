@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Logo"
+    tools:context=".DashboardActivity">
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcometxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/ImageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rect4"
+        android:contentDescription="@string/todo1"
+        app:layout_constraintTop_toBottomOf="@id/welcometxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Car Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/carImageView"
+        android:layout_width="110dp"
+        android:layout_height="160dp"
+        android:src="@drawable/car"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="3dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/ImageView1"
+        app:layout_constraintStart_toStartOf="@id/ImageView1"
+        app:layout_constraintEnd_toStartOf="@id/CarOfTheDay" />
+
+    <!-- Car of the Day Title -->
+    <TextView
+        android:id="@+id/CarOfTheDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/car_of_the_day"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@id/carImageView"
+        app:layout_constraintTop_toTopOf="@id/ImageView1" />
+
+    <!-- Car Name -->
+    <TextView
+        android:id="@+id/carNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="BMW M4"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/carImageView"
+        app:layout_constraintTop_toBottomOf="@id/CarOfTheDay" />
+
+    <!-- Car Description -->
+    <TextView
+        android:id="@+id/carDescriptionTextView"
+        android:layout_width="150dp"
+        android:layout_height="96dp"
+        android:text="@string/the_m4_gts_has_according_to_Bmw_lapped_the_infamous_nurburgring_nordschleife_track_in_7_minutes_and_28_seconds"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/carImageView"
+        app:layout_constraintTop_toBottomOf="@id/carNameTextView" />
+
+    <!-- Buttons Row 1 -->
+    <Button
+        android:id="@+id/btnLocateCars"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:text="@string/locate_car"
+        android:textColor="#4E342E"
+        android:backgroundTint="@color/lightyellow"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@id/carDescriptionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnKnowledge" />
+
+    <Button
+        android:id="@+id/btnKnowledge"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:text="@string/Car_Knowledge"
+        android:textColor="#212121"
+        android:backgroundTint="@color/lightyellow"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@id/carDescriptionTextView"
+        app:layout_constraintStart_toEndOf="@id/btnLocateCars"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Buttons Row 2 -->
+    <Button
+        android:id="@+id/btnObservations"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:text="@string/observation"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:backgroundTint="@color/lightyellow"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnLocateCars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnExplore" />
+
+    <Button
+        android:id="@+id/btnExplore"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:text="@string/explore"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/lightyellow"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnKnowledge"
+        app:layout_constraintStart_toEndOf="@id/btnObservations"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text="@string/logout"
+        android:drawableStart="@drawable/logout_icon"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnExplore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

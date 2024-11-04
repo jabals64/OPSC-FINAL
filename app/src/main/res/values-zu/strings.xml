@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">CARSPOTTER.OPSC7312.POE</string>
+    <string name="mapbox_access_token">pk.eyJ1Ijoia2luZ2pvcmRhbjIwMDAiLCJhIjoiY2xud2JyMzl5MDkyNzJrb2EwYXY3M2RiMSJ9.2nkt4SgnkNNz7YmdL8wsYg</string>
+
+    <string name="placeholder_car_name">Igama leMoto</string>
+    <string name="placeholder_model">Imodeli</string>
+    <string name="placeholder_car_description">Incazelo yeMoto</string>
+
+    <string name="bird_image">Umfanekiso weMoto</string>
+
+    <string name="outdoorView">Um view wangaphandle</string>
+    <string name="trafficView">Um view wezithuthi</string>
+    <string name="streetView">Um view wesitaladi</string>
+    <string name="satelliteView">Um view wesathelayithi</string>
+    <string name="latitude">Ilatitude</string>
+    <string name="longitude">Ilongitude</string>
+    <string name="delete">Susa</string>
+    <string name="cancel">Khansela</string>
+    <string name="homeview">Um view weKhaya</string>
+
+    <string name="logo_description">Phenya. Thola. Phakamisa.</string>
+    <string name="welcome_to">WAMUKELWE KU</string>
+    <string name="Carspotter">CarSpotter</string>
+    <string name="explore_discover_drive">Phenya | Thola | Gijima</string>
+    <string name="get_started">Qala</string>
+    <string name="icon">ikoni</string>
+    <string name="C_rspotter">C Spotter</string>
+    <string name="todo">TODO</string>
+    <string name="new_to_carspotter_register_now">Ujolise kwiCarspotter? Bhalisela Manje</string>
+    <string name="email">I-imeyili</string>
+    <string name="title">Isihloko</string>
+    <string name="password">Iphasiwedi</string>
+    <string name="sign_in">Ngena</string>
+    <string name="sign_in_with_google">Ngena ngeGoogle</string>
+    <string name="login">Ngena</string>
+    <string name="register">Bhalisela</string>
+    <string name="enter_password_again">Faka iphasiwedi futhi</string>
+    <string name="sign_up">Bhalisela</string>
+    <string name="sign_up_with_SIGNUP">Unayo i-akhawunti? Bhalisela</string>
+    <string name="welcome">Wamukelekile</string>
+    <string name="todo1">TODO</string>
+    <string name="car_of_the_day">Imoto yansuku zonke</string>
+    <string name="the_m4_gts_has_according_to_Bmw_lapped_the_infamous_nurburgring_nordschleife_track_in_7_minutes_and_28_seconds">IM4 GTS, ngokusho kweBMW, ibhaxabulile umjaho odumile iNürburgring Nordschleife ngo 7 imizuzu no 28 amasekhondi.</string>
+    <string name="view_car">Buka Imoto</string>
+    <string name="locate_car">Thola Imoto</string>
+    <string name="Car_Knowledge">Ulwazi lweMota</string>
+    <string name="explore">Phenya</string>
+    <string name="view_car2">Buka Imoto</string>
+    <string name="explore2">PHENYA</string>
+    <string name="hot_spots">Izindawo Ezishisayo</string>
+    <string name="near_me">EDLULANE</string>
+    <string name="view_all">Buka Onke</string>
+    <string name="near_me_label">EDLULANE</string>
+    <string name="save_location">Gcina Indawo</string>
+    <string name="birdfeeding">UKUPHAKELA IZINYONI</string>
+    <string name="todo4">TODO</string>
+    <string name="birdfeeding_tip">Isixwayiso sokuphakelwa kwezinyoni</string>
+    <string name="use_quality_bird_food_offer_a_mix_of_seeds_suet_nectar_and_fruit_that_suit_the_birds_in_your_region_research_the_preferences_of_local_species">Sebenzisa Ukudla Kwezinyoni Okuhle: Nikeza inhlamvu, suet, nectar, nezithelo ezihambelana nezinyoni ezisemaphandleni akho. Cwaninga izintandokazi zezinhlobo zendawo.</string>
+    <string name="sentences">Akukho ubhontshisi noma ukudla okungasebenzi: Gwema ukuphakela izinyoni ubhontshisi, amakhekhe, noma okunye ukudla okungasebenzi njengoba kungawusizo futhi kungalimaza impilo yezinyoni.</string>
+    <string name="safety_considerations">Izinto Ezibalulekile Zokuphepha</string>
+    <string name="enable_night_mode">Vula imodi yeNhloko</string>
+    <string name="profile">Iphrofayela</string>
+    <string name="badges">Amabheji</string>
+    <string name="settings">Izilungiselelo</string>
+    <string name="km_miles">KM/MILES</string>
+    <string name="c_spotter1">C Spotter</string>
+    <string name="dashboard">I-Dashboard</string>
+    <string name="save">Gcina</string>
+    <string name="imperial_miles">Imperial (Miles)</string>
+    <string name="metric_km">Metric (KM)</string>
+    <string name="km_miles1">KM/Miles</string>
+    <string name="maximum_distance_to_hotspot">Ibanga elikhulu ukuya kudokotela</string>
+
+    <!-- weather Response-->
+    <string name="city_name">Igama leDolobha</string>
+    <string name="send_request">Thumela Isicelo</string>
+    <string name="loading">Layisha…</string>
+    <string name="biometric_login">Sebenzisa Biometrika</string>
+    <string name="logout">Logout</string>
+    <string name="observation">Observation</string>
+</resources>

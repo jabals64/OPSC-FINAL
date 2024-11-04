@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">CARSPOTTER.OPSC7312.POE</string>
+    <string name="mapbox_access_token">pk.eyJ1Ijoia2luZ2pvcmRhbjIwMDAiLCJhIjoiY2xud2JyMzl5MDkyNzJrb2EwYXY3M2RiMSJ9.2nkt4SgnkNNz7YmdL8wsYg</string>
+
+    <!-- Placeholder text for car names, models, and description -->
+    <string name="placeholder_car_name">Car Name</string>
+    <string name="placeholder_model"> Model </string>
+    <string name="placeholder_car_description">Car Description</string>
+    <string name="bird_image">Car Image</string>
+    <string name="outdoorView">Outdoor View</string>
+    <string name="trafficView">Traffic View</string>
+    <string name="streetView">Street View</string>
+    <string name="satelliteView">Satellite View</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="homeview">Home View</string>
+
+    <string name="logo_description">Explore.Discover.Soar</string>
+    <string name="welcome_to">WELCOME TO</string>
+    <string name="Carspotter">CarSpotter</string>
+    <string name="explore_discover_drive">Explore | Discover | Drive</string>
+    <string name="get_started">Get Started</string>
+    <string name="icon">icon</string>
+    <string name="C_rspotter">C Spotter</string>
+    <string name="todo">TODO</string>
+    <string name="new_to_carspotter_register_now">New to Carspotter? Register Now</string>
+    <string name="email">Email</string>
+    <string name="title">title</string>
+    <string name="password">Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="enter_password_again">Enter Password again</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_with_SIGNUP">Have an account? Sign Up</string>
+    <string name="welcome">Welcome</string>
+    <string name="todo1">TODO</string>
+    <string name="car_of_the_day">Car of the Day</string>
+    <string name="the_m4_gts_has_according_to_Bmw_lapped_the_infamous_nurburgring_nordschleife_track_in_7_minutes_and_28_seconds">The M4 GTS has, according to BMW, lapped the infamous Nürburgring Nordschleife track in 7 minutes and 28 seconds.</string>
+    <string name="view_car">VIEW Car</string>
+    <string name="locate_car">Locate Car</string>
+    <string name="Car_Knowledge">Knowledge</string>
+    <string name="explore">Explore</string>
+    <string name="view_car2">View Car</string>
+    <string name="explore2">EXPLORE</string>
+    <string name="hot_spots">Hot Spots</string>
+    <string name="near_me">NEAR ME</string>
+    <string name="view_all">VIEW ALL</string>
+    <string name="near_me_label">NEAR ME</string>
+    <string name="save_location">SAVE LOCATION</string>
+    <string name="birdfeeding">BIRDFEEDING</string>
+    <string name="todo4">TODO</string>
+    <string name="birdfeeding_tip">Birdfeeding Tip</string>
+    <string name="use_quality_bird_food_offer_a_mix_of_seeds_suet_nectar_and_fruit_that_suit_the_birds_in_your_region_research_the_preferences_of_local_species">Use Quality Bird Food: Offer a mix of seeds, suet, nectar, and fruit that suit the birds in your region. Research the preferences of local species.</string>
+    <string name="sentences">No Bread or Junk Food: Avoid feeding birds bread, cookies, or other junk food as it lacks nutritional value and can harm birds\' health.</string>
+    <string name="safety_considerations">Safety Considerations</string>
+    <string name="enable_night_mode">Enable night mode</string>
+    <string name="profile">PROFILE</string>
+    <string name="badges">BADGES</string>
+    <string name="settings">SETTINGS</string>
+    <string name="km_miles">KM/MILES</string>
+    <string name="c_spotter1">C Spotter </string>
+    <string name="dashboard">Dashboard</string>
+    <string name="save">Save</string>
+    <string name="imperial_miles">Imperial (Miles)</string>
+    <string name="metric_km">Metric (KM)</string>
+    <string name="km_miles1">KM/Miles</string>
+    <string name="maximum_distance_to_hotspot">Maximum distance to hotspot</string>
+
+    <!-- weather Response-->
+    <string name="city_name">City Name</string>
+    <string name="send_request">Send Request</string>
+    <string name="loading">Loading…</string>
+    <string name="biometric_login">Use Biometric Login</string>
+    <string name="don_t_have_an_account_signup">Don\'t have an account: SignUp</string>
+    <string name="logout">Logout</string>
+    <string name="observation">Observation</string>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Zulu</item>
+        <item>Afrikaans</item>
+    </string-array>
+</resources>
