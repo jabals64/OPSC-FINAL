@@ -1,22 +1,33 @@
 package com.example.carspotteropsc7312poe
 
+import android.Manifest
 import android.content.Context
-import android.os.Bundle
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
+import android.os.Bundle
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
-import com.example.carspotteropsc7312poe.authentication.LoginActivity
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
+import com.example.carspotteropsc7312poe.authentication.LoginActivity
 import com.example.carspotteropsc7312poe.dataclass.SyncWorker
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Request notification permission if the device is running Android 13 (API level 33) or higher
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            requestNotificationPermission()
+        }
 
         // Find the login button in the layout by its ID
         val btnLogin = findViewById<Button>(R.id.loginButton)
@@ -37,13 +48,41 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
             }
         }
-        fun scheduleSync(context: Context) {
-            val syncRequest = PeriodicWorkRequestBuilder<SyncWorker>(24, TimeUnit.HOURS).build()
-            WorkManager.getInstance(context).enqueueUniquePeriodicWork(
-                "SyncDataWork",
-                ExistingPeriodicWorkPolicy.KEEP,
-                syncRequest
-            )
+
+        // Schedule Sync Worker
+        scheduleSync(this)
+    }
+
+    private fun scheduleSync(context: Context) {
+        val syncRequest = PeriodicWorkRequestBuilder<SyncWorker>(24, TimeUnit.HOURS).build()
+        WorkManager.getInstance(context).enqueueUniquePeriodicWork(
+            "SyncDataWork",
+            ExistingPeriodicWorkPolicy.KEEP,
+            syncRequest
+        )
+    }
+
+    // Function to request notification permission for Android 13 or higher
+    private fun requestNotificationPermission() {
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // Register the request permission launcher to ask for the POST_NOTIFICATIONS permission
+            val requestPermissionLauncher =
+                registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
+                    if (isGranted) {
+                        // Permission is granted, you can proceed with notifications
+                        Toast.makeText(this, "Notification permission granted", Toast.LENGTH_SHORT).show()
+                    } else {
+                        // Permission denied, inform the user that notifications will be disabled
+                        Toast.makeText(this, "Notification permission denied", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+            // Launch the permission request
+            requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
         }
     }
 }
