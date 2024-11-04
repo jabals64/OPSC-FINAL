@@ -8,7 +8,9 @@ plugins {
 android {
     namespace = "com.example.carspotteropsc7312poe"
     compileSdk = 34
-
+lint {
+        baseline = file("lint-baseline.xml")
+    }
     defaultConfig {
         applicationId = "com.example.carspotteropsc7312poe"
         minSdk = 25
