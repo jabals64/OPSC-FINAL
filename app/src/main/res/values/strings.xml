@@ -75,7 +75,7 @@
     <string name="send_request">Send Request</string>
     <string name="loading">Loading…</string>
     <string name="biometric_login">Use Biometric Login</string>
-    <string name="don_t_have_an_account_signup">Don\'t have an account: SignUp</string>
+    <string name="don_t_have_an_account_signup" translatable="false">Don't have an account: SignUp</string>
     <string name="logout">Logout</string>
     <string name="observation">Observation</string>
 
