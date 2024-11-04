@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout Repository
       - uses: actions/checkout@v3
 
       # Set Current Date As Env Variable
@@ -37,6 +38,15 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
+      # Set Lint Baseline
+      - name: Set Lint Baseline
+        run: |
+          echo "android {
+              lintOptions {
+                  baseline file('lint-baseline.xml')
+              }
+          }" >> $GITHUB_WORKSPACE/app/build.gradle
+
       # Run Tests with Gradle
       - name: Run gradle tests with info
         run: ./gradlew test --info
@@ -48,3 +58,35 @@ jobs:
       # Build the Project with more detailed output
       - name: Build gradle project with debug
         run: ./gradlew build --debug
+
+      # Generate APK Debug
+      - name: Build APK Debug
+        run: ./gradlew assembleDebug
+
+      # Generate APK Release
+      - name: Build APK Release
+        run: ./gradlew assembleRelease
+
+      # Generate App Bundle (AAB) Release
+      - name: Build App Bundle Release (AAB)
+        run: ./gradlew bundleRelease
+
+      # Upload APK Debug as an artifact
+      - name: Upload APK Debug
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
+          path: ${{ env.main_project_module }}/build/outputs/apk/debug/*.apk
+
+      # Upload APK Release as an artifact
+      - name: Upload APK Release
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) release generated
+          path: ${{ env.main_project_module }}/build/outputs/apk/release/*.apk
+
+      # Upload AAB (App Bundle) Release as an artifact
+      - name: Upload AAB (App Bundle) Release
+        uses: actions/upload-artifact@v3
+    
+
