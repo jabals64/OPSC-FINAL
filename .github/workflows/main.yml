@@ -38,15 +38,6 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
-      # Set Lint Baseline
-      - name: Set Lint Baseline
-        run: |
-          echo "android {
-              lintOptions {
-                  baseline file('lint-baseline.xml')
-              }
-          }" >> $GITHUB_WORKSPACE/app/build.gradle
-
       # Run Tests with Gradle
       - name: Run gradle tests with info
         run: ./gradlew test --info
@@ -88,5 +79,8 @@ jobs:
       # Upload AAB (App Bundle) Release as an artifact
       - name: Upload AAB (App Bundle) Release
         uses: actions/upload-artifact@v3
-    
+        with:
+          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - App bundle(s) AAB release generated
+          path: ${{ env.main_project_module }}/build/outputs/bundle/release/*.aab
+
 
