@@ -1,0 +1,50 @@
+name: Generated APK AAB (Upload - Create Artifact To Github Action)
+
+env:
+  # The name of the main module repository
+  main_project_module: app
+  # The name of the Play Store
+  playstore_name: CarSpotter
+  # Repository name
+  repository_name: OPSC-FINAL
+
+on:
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Set Current Date As Env Variable
+      - name: Set current date as env variable
+        run: echo "date_today=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      # Set Up JDK
+      - name: Set Up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          cache: 'gradle'
+
+      # Change permissions for the gradlew script to make it executable
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+
+      # Run Tests with Gradle
+      - name: Run gradle tests with info
+        run: ./gradlew test --info
+
+      # Run Lint with Continue on Warning
+      - name: Run lint with warning mode
+        run: ./gradlew lint --warning-mode all --continue
+
+      # Build the Project with more detailed output
+      - name: Build gradle project with debug
+        run: ./gradlew build --debug
