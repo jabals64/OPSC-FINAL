@@ -8,9 +8,7 @@ plugins {
 android {
     namespace = "com.example.carspotteropsc7312poe"
     compileSdk = 34
-lint {
-        baseline = file("lint-baseline.xml")
-    }
+
     defaultConfig {
         applicationId = "com.example.carspotteropsc7312poe"
         minSdk = 25
@@ -19,6 +17,10 @@ lint {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        baseline file("lint-baseline.xml")
     }
 
     buildTypes {
@@ -38,19 +40,6 @@ lint {
 
     kotlinOptions {
         jvmTarget = "1.8"
-    }
-    // Force Kotlin tasks to use JVM 1.8
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = "1.8"
-        }
-    }
-    // Force kapt to use JVM 1.8
-    kapt {
-        javacOptions {
-            option("-source", "1.8")
-            option("-target", "1.8")
-        }
     }
 
     buildFeatures {
@@ -116,3 +105,4 @@ dependencies {
     implementation("androidx.biometric:biometric:1.1.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")  // Ensure Kotlin version matches your project's Kotlin version
 }
+
